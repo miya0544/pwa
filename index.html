@@ -1,0 +1,24 @@
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon144.png" sizes="192x192"/>
+     
+    <script>
+    window.addEventListener('load', function() {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("/serviceWorker.js")
+          .then(function(registration) {
+            console.log("serviceWorker registed.");
+          }).catch(function(error) {
+            console.warn("serviceWorker error.", error);
+          });
+      }
+    });
+    </script>
+     
+    </head>
+     
+    <body>
+    こんにちは
+    </body>
+     
+    </html>
